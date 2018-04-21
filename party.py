@@ -35,6 +35,14 @@ def most_and_least_common_type(treats):
     >>> most_and_least_common_type(treats)
     ('dessert', 'drink')
 
+    >>> treats = [{'type': 'drink'}, {'type': 'drink'}]
+       >>> most_and_least_common_type(treats)
+       ('drink', 'drink')
+
+    >>> treats = []
+       >>> most_and_least_common_type(treats)
+       (None, None)   
+
     """
 
     types = {}
@@ -135,4 +143,4 @@ if __name__ == "__main__":
     app.debug = True
     app.config['DEBUG_TB_INTERCEPT_REDIRECTS'] = False
     DebugToolbarExtension(app)
-    app.run()
+    app.run(host='0.0.0.0')
